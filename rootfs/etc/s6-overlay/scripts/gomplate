@@ -1,0 +1,11 @@
+#!/bin/sh
+
+# copy extra main to /etc/postfix/main.cf
+if test ! -z "$POSTFIX_EXTRA_MAIN" && test -f "$POSTFIX_EXTRA_MAIN"; then
+  gomplate < "$POSTFIX_EXTRA_MAIN" >> /etc/postfix/main.cf
+fi
+
+# copy extra master to /etc/postfix/master.cf
+if test ! -z "$POSTFIX_EXTRA_MASTER" && test -f "$POSTFIX_EXTRA_MASTER"; then
+  gomplate < "$POSTFIX_EXTRA_MASTER" >> /etc/postfix/master.cf
+fi
