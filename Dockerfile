@@ -2,7 +2,7 @@ FROM alpine:3.21.3
 
 ARG S6_OVERLAY_VERSION=3.2.0.2
 ARG POSTFIX_VERSION=3.9.3-r0
-ARG GOMPLATE_VERSION=3.11.7-r6
+ARG GOMPLATE_VERSION=4.2.0-r3
 
 RUN apk add --update --no-cache postfix=${POSTFIX_VERSION} postfix-pgsql=${POSTFIX_VERSION} gomplate=${GOMPLATE_VERSION} \
     && rm -rf /var/cache/apk/* \
