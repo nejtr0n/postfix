@@ -31,4 +31,4 @@ jobs:
           push: true
           tags: |
             ghcr.io/nejtr0n/postfix:latest
-            ghcr.io/nejtr0n/postfix:3.9.0-alpine3.20.3
+            ghcr.io/nejtr0n/postfix:3.9.0-alpine3.21.3
